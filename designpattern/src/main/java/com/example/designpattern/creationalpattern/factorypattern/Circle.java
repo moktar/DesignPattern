@@ -1,6 +1,8 @@
-package com.example.designpattern.factorypattern;
+package com.example.designpattern.creationalpattern.factorypattern;
 
 import android.util.Log;
+
+import com.example.designpattern.creationalpattern.factorypattern.Shape;
 
 public class Circle implements Shape {
     @Override

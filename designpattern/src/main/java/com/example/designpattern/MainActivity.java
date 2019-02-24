@@ -4,11 +4,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 
-import com.example.designpattern.factorypattern.DomesticPlane;
-import com.example.designpattern.factorypattern.GetPlaneFactory;
-import com.example.designpattern.factorypattern.Plane;
-import com.example.designpattern.factorypattern.Shape;
-import com.example.designpattern.factorypattern.ShapeFactory;
+import com.example.designpattern.creationalpattern.factorypattern.GetPlaneFactory;
+import com.example.designpattern.creationalpattern.factorypattern.Plane;
+import com.example.designpattern.creationalpattern.factorypattern.Shape;
+import com.example.designpattern.creationalpattern.factorypattern.ShapeFactory;
 
 public class MainActivity extends AppCompatActivity {
 

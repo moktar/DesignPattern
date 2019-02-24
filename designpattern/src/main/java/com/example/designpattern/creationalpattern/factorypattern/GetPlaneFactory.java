@@ -1,4 +1,4 @@
-package com.example.designpattern.factorypattern;
+package com.example.designpattern.creationalpattern.factorypattern;
 
 public class GetPlaneFactory {
     //use getPlan method to get object of type Plan
