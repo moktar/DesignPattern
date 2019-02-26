@@ -4,6 +4,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 
+import com.example.designpattern.creationalpattern.abstractfactorypattern.AbstractFactory;
+import com.example.designpattern.creationalpattern.abstractfactorypattern.Bank;
+import com.example.designpattern.creationalpattern.abstractfactorypattern.FactoryCreator;
+import com.example.designpattern.creationalpattern.abstractfactorypattern.Loan;
 import com.example.designpattern.creationalpattern.factorypattern.GetPlaneFactory;
 import com.example.designpattern.creationalpattern.factorypattern.Plane;
 import com.example.designpattern.creationalpattern.factorypattern.Shape;
@@ -19,9 +23,23 @@ public class MainActivity extends AppCompatActivity {
          * Java creational design pattern
          */
         // test factory pattern
-        generateShapes();
-        makePlanes();
+//        generateShapes();
+//        makePlanes();
+        // test abstract factory pattern
+        makeLoan();
     }
+
+    private void makeLoan() {
+        AbstractFactory bankFactory = FactoryCreator.getFactory("Bank");
+        Bank b = bankFactory.getBank("ICICI"); // ICICI/SBI/HDFC
+        Log.i("Bank", "The name of the bank: " + b.getBankName());
+
+        AbstractFactory loanFactory = FactoryCreator.getFactory("Loan");
+        Loan l=loanFactory.getLoan("Home"); // Home/Business/Education
+        l.getInterestRate(12.9);
+        l.calculateLoanPayment(500000, 5);
+    }
+
 
     private void makePlanes() {
         GetPlaneFactory planeFactory = new GetPlaneFactory();
@@ -39,19 +57,19 @@ public class MainActivity extends AppCompatActivity {
         ShapeFactory shapeFactory = new ShapeFactory();
 
         //get an object of Circle and call its draw method.
-        Shape shape1 = shapeFactory.getShape("CIRCLE");
+        Shape shape1 = (Shape) shapeFactory.getShape("CIRCLE");
 
         //call draw method of Circle
         shape1.draw();
 
         //get an object of Rectangle and call its draw method.
-        Shape shape2 = shapeFactory.getShape("RECTANGLE");
+        Shape shape2 = (Shape) shapeFactory.getShape("RECTANGLE");
 
         //call draw method of Rectangle
         shape2.draw();
 
         //get an object of Square and call its draw method.
-        Shape shape3 = shapeFactory.getShape("SQUARE");
+        Shape shape3 = (Shape) shapeFactory.getShape("SQUARE");
 
         //call draw method of square
         shape3.draw();
