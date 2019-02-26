@@ -60,3 +60,4 @@ In core java, there are mainly three types of design patterns, which are further
       10. Template Pattern
       11. Visitor Pattern
  
+ To learn more details about design pattern, please view wiki of this reopository.
