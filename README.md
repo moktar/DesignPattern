@@ -1,4 +1,4 @@
-# DisignPattern
+# Design Pattern
 Design Patterns in Java
 A design patterns are well-proved solution for solving the specific problem/task.
 Now, a question will be arising in your mind what kind of specific problem? Let me explain by taking an example.
