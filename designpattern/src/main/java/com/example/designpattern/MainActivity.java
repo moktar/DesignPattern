@@ -12,6 +12,8 @@ import com.example.designpattern.creationalpattern.factorypattern.GetPlaneFactor
 import com.example.designpattern.creationalpattern.factorypattern.Plane;
 import com.example.designpattern.creationalpattern.factorypattern.Shape;
 import com.example.designpattern.creationalpattern.factorypattern.ShapeFactory;
+import com.example.designpattern.creationalpattern.singletonpattern.SingleObject;
+import com.example.designpattern.creationalpattern.singletonpattern.Singleton;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -26,7 +28,26 @@ public class MainActivity extends AppCompatActivity {
 //        generateShapes();
 //        makePlanes();
         // test abstract factory pattern
-        makeLoan();
+//        makeLoan();
+        // test singleton pattern
+        createSingleObject();
+        createSingleInstance();
+    }
+
+    private void createSingleInstance() {
+        //Get the only object available
+        Singleton singleton = Singleton.getSingleton();
+
+        //show the message
+        singleton.doSomething();
+    }
+
+    private void createSingleObject() {
+        //Get the only object available
+        SingleObject object = SingleObject.getSingleObject();
+
+        //show the message
+        object.doSomething();
     }
 
     private void makeLoan() {
