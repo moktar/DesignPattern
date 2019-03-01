@@ -12,6 +12,7 @@ import com.example.designpattern.creationalpattern.factorypattern.GetPlaneFactor
 import com.example.designpattern.creationalpattern.factorypattern.Plane;
 import com.example.designpattern.creationalpattern.factorypattern.Shape;
 import com.example.designpattern.creationalpattern.factorypattern.ShapeFactory;
+import com.example.designpattern.creationalpattern.prototypepattern.EmployeeRecord;
 import com.example.designpattern.creationalpattern.singletonpattern.SingleObject;
 import com.example.designpattern.creationalpattern.singletonpattern.Singleton;
 
@@ -30,8 +31,20 @@ public class MainActivity extends AppCompatActivity {
         // test abstract factory pattern
 //        makeLoan();
         // test singleton pattern
-        createSingleObject();
-        createSingleInstance();
+//        createSingleObject();
+//        createSingleInstance();
+        // test prototype pattern
+        clonePrototype();
+    }
+
+    private void clonePrototype() {
+        EmployeeRecord e1=new EmployeeRecord(102, "Moktar Hossain", "Android Developer", 150000, "Dhaka");
+
+        e1.showRecord();
+        System.out.println("\n");
+
+        EmployeeRecord e2=(EmployeeRecord) e1.getClone();
+        e2.showRecord();
     }
 
     private void createSingleInstance() {
