@@ -8,6 +8,10 @@ import com.example.designpattern.creationalpattern.abstractfactorypattern.Abstra
 import com.example.designpattern.creationalpattern.abstractfactorypattern.Bank;
 import com.example.designpattern.creationalpattern.abstractfactorypattern.FactoryCreator;
 import com.example.designpattern.creationalpattern.abstractfactorypattern.Loan;
+import com.example.designpattern.creationalpattern.builderpattern.makecd.CDBuilder;
+import com.example.designpattern.creationalpattern.builderpattern.makecd.CDType;
+import com.example.designpattern.creationalpattern.builderpattern.makefastfood.Meal;
+import com.example.designpattern.creationalpattern.builderpattern.makefastfood.MealBuilder;
 import com.example.designpattern.creationalpattern.factorypattern.GetPlaneFactory;
 import com.example.designpattern.creationalpattern.factorypattern.Plane;
 import com.example.designpattern.creationalpattern.factorypattern.Shape;
@@ -34,16 +38,43 @@ public class MainActivity extends AppCompatActivity {
 //        createSingleObject();
 //        createSingleInstance();
         // test prototype pattern
-        clonePrototype();
+//        clonePrototype();
+        // test builder pattern
+        makeFastFood();
+        makeCD();
+    }
+
+    private void makeCD() {
+        CDBuilder cdBuilder=new CDBuilder();
+        CDType cdType1=cdBuilder.buildSonyCD();
+        cdType1.showItems();
+
+        CDType cdType2=cdBuilder.buildSamsungCD();
+        cdType2.showItems();
+    }
+
+    private void makeFastFood() {
+        MealBuilder mealBuilder = new MealBuilder();
+
+        Meal vegMeal = mealBuilder.prepareVegMeal();
+        Log.i("Fast Food: ", "Veg Meal");
+        vegMeal.showItems();
+        Log.i("Fast Food: ", "Total Cost: " + vegMeal.getCost());
+
+        Meal nonVegMeal = mealBuilder.prepareNonVegMeal();
+        Log.i("Fast Food: ", "\n\nNon-Veg Meal");
+        nonVegMeal.showItems();
+        Log.i("Fast Food: ", "Total Cost: " + nonVegMeal.getCost());
+
     }
 
     private void clonePrototype() {
-        EmployeeRecord e1=new EmployeeRecord(102, "Moktar Hossain", "Android Developer", 150000, "Dhaka");
+        EmployeeRecord e1 = new EmployeeRecord(102, "Moktar Hossain", "Android Developer", 150000, "Dhaka");
 
         e1.showRecord();
         System.out.println("\n");
 
-        EmployeeRecord e2=(EmployeeRecord) e1.getClone();
+        EmployeeRecord e2 = (EmployeeRecord) e1.getClone();
         e2.showRecord();
     }
 
@@ -69,7 +100,7 @@ public class MainActivity extends AppCompatActivity {
         Log.i("Bank", "The name of the bank: " + b.getBankName());
 
         AbstractFactory loanFactory = FactoryCreator.getFactory("Loan");
-        Loan l=loanFactory.getLoan("Home"); // Home/Business/Education
+        Loan l = loanFactory.getLoan("Home"); // Home/Business/Education
         l.getInterestRate(12.9);
         l.calculateLoanPayment(500000, 5);
     }
