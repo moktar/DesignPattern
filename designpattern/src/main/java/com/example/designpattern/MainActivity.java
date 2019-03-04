@@ -16,6 +16,7 @@ import com.example.designpattern.creationalpattern.factorypattern.GetPlaneFactor
 import com.example.designpattern.creationalpattern.factorypattern.Plane;
 import com.example.designpattern.creationalpattern.factorypattern.Shape;
 import com.example.designpattern.creationalpattern.factorypattern.ShapeFactory;
+import com.example.designpattern.creationalpattern.objectpoolpattern.ObjectPoolDemo;
 import com.example.designpattern.creationalpattern.prototypepattern.EmployeeRecord;
 import com.example.designpattern.creationalpattern.singletonpattern.SingleObject;
 import com.example.designpattern.creationalpattern.singletonpattern.Singleton;
@@ -40,8 +41,17 @@ public class MainActivity extends AppCompatActivity {
         // test prototype pattern
 //        clonePrototype();
         // test builder pattern
-        makeFastFood();
-        makeCD();
+//        makeFastFood();
+//        makeCD();
+        // test object pool pattern
+        executeObjectPool();
+    }
+
+    private void executeObjectPool() {
+        ObjectPoolDemo op=new ObjectPoolDemo();
+        op.setUp();
+        op.tearDown();
+        op.testObjectPool();
     }
 
     private void makeCD() {
