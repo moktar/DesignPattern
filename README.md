@@ -117,7 +117,7 @@ The Factory Method Pattern is also known as **Virtual Constructor**.
 
 ![](https://www.javatpoint.com/images/designpattern/factorymethod.jpg)
 
-# 2. Abstract Factory Pattern
+## 2. Abstract Factory Pattern
 
 Abstract Factory Pattern says that just **define an interface or abstract class for creating families of related (or dependent) objects but without specifying their concrete sub-classes**.That means Abstract Factory lets a class returns a factory of classes. So, this is the reason that Abstract Factory Pattern is one level higher than the Factory Pattern.
 
@@ -146,7 +146,7 @@ See the diagram carefully which is given below:
 
 ![](https://www.javatpoint.com/images/designpattern/abstractfactory.jpg)
 
-# 3. Singleton Pattern
+## 3. Singleton Pattern
 
 Singleton Pattern says that just **"define a class that has only one instance and provides a global point of access to it"**.
 
@@ -238,13 +238,13 @@ public class A implements Serializable {
   
 }  
 
-# 4. Prototype Pattern
+## 4. Prototype Pattern
 
 Prototype Pattern says that **cloning of an existing object instead of creating new one and can also be customized as per the requirement.**
 
 This pattern should be followed, if the cost of creating a new object is expensive and resource intensive.
 
-## Advantage of Prototype Pattern
+### Advantage of Prototype Pattern
 
 The main advantages of prototype pattern are as follows:
 
@@ -253,18 +253,18 @@ The main advantages of prototype pattern are as follows:
 * The clients can get new objects without knowing which type of object it will be.
 * It lets you add or remove objects at runtime.
 
-## Usage of Prototype Pattern
+### Usage of Prototype Pattern
 
 * When the classes are instantiated at runtime.
 * When the cost of creating an object is expensive or complicated.
 * When you want to keep the number of classes in an application minimum.
 * When the client application needs to be unaware of object creation and representation.
 
-## UML for Prototype Pattern
+### UML for Prototype Pattern
 
 ![](https://www.javatpoint.com/images/designpattern/prototype.jpg)
 
-# 5. Builder Pattern
+## 5. Builder Pattern
 
 Builder Pattern says that **"construct a complex object from simple objects using step-by-step approach"**
 
@@ -282,7 +282,7 @@ The main advantages of Builder Pattern are as follows:
 
 ![](https://www.javatpoint.com/images/designpattern/builderuml1.jpg)
 
-# 6. Object Pool Pattern
+## 6. Object Pool Pattern
 
 Mostly, performance is the key issue during the software development and the object creation, which may be a costly step.
 
@@ -380,7 +380,7 @@ Reusing an object by sharing it.
 
 Representing another object.
 
-# 1. Adapter Pattern
+## 1. Adapter Pattern
 
 An Adapter Pattern says that just **"converts the interface of a class into another interface that a client wants".**
 
