@@ -20,6 +20,9 @@ import com.example.designpattern.creationalpattern.objectpoolpattern.ObjectPoolD
 import com.example.designpattern.creationalpattern.prototypepattern.EmployeeRecord;
 import com.example.designpattern.creationalpattern.singletonpattern.SingleObject;
 import com.example.designpattern.creationalpattern.singletonpattern.Singleton;
+import com.example.designpattern.structuralpattern.adapterpattern.AudioPlayer;
+import com.example.designpattern.structuralpattern.adapterpattern.BankCustomer;
+import com.example.designpattern.structuralpattern.adapterpattern.CreditCard;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -28,6 +31,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         /**
+         * To view output of these design pattern select logcat tab then select info from dropdown menu
+         * and search the specific log tag name.
          * Java creational design pattern
          */
         // test factory pattern
@@ -44,7 +49,28 @@ public class MainActivity extends AppCompatActivity {
 //        makeFastFood();
 //        makeCD();
         // test object pool pattern
-        executeObjectPool();
+//        executeObjectPool();
+        /**
+         * Java structural design pattern
+         */
+        // test adapter pattern
+//        getCustomerDetails();
+        playAudioPlayer();
+    }
+
+    private void playAudioPlayer() {
+        AudioPlayer audioPlayer = new AudioPlayer();
+
+        audioPlayer.play("mp3", "beyond the horizon.mp3");
+        audioPlayer.play("mp4", "alone.mp4");
+        audioPlayer.play("vlc", "far far away.vlc");
+        audioPlayer.play("avi", "mind me.avi");
+    }
+
+    private void getCustomerDetails() {
+        CreditCard targetInterface = new BankCustomer();
+        targetInterface.giveBankDetails();
+        Log.i("Customer Details: ", targetInterface.getCreditCard());
     }
 
     private void executeObjectPool() {
