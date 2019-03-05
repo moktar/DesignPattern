@@ -23,6 +23,12 @@ import com.example.designpattern.creationalpattern.singletonpattern.Singleton;
 import com.example.designpattern.structuralpattern.adapterpattern.AudioPlayer;
 import com.example.designpattern.structuralpattern.adapterpattern.BankCustomer;
 import com.example.designpattern.structuralpattern.adapterpattern.CreditCard;
+import com.example.designpattern.structuralpattern.bridgepattern.Circle;
+import com.example.designpattern.structuralpattern.bridgepattern.CircleShape;
+import com.example.designpattern.structuralpattern.bridgepattern.GreenCircle;
+import com.example.designpattern.structuralpattern.bridgepattern.JavaQuestions;
+import com.example.designpattern.structuralpattern.bridgepattern.QuestionFormat;
+import com.example.designpattern.structuralpattern.bridgepattern.RedCircle;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -55,7 +61,29 @@ public class MainActivity extends AppCompatActivity {
          */
         // test adapter pattern
 //        getCustomerDetails();
-        playAudioPlayer();
+//        playAudioPlayer();
+        // test bridge pattern
+        drawCircle();
+        makeQuestion();
+    }
+
+    private void makeQuestion() {
+        QuestionFormat questions = new QuestionFormat("Java Programming Language");
+        questions.q = new JavaQuestions();
+        questions.delete("what is class?");
+        questions.display();
+        questions.newOne("What is inheritance? ");
+
+        questions.newOne("How many types of inheritance are there in java?");
+        questions.displayAll();
+    }
+
+    private void drawCircle() {
+        CircleShape redCircle = new Circle(100,100, 10, new RedCircle());
+        CircleShape greenCircle = new Circle(100,100, 10, new GreenCircle());
+
+        redCircle.draw();
+        greenCircle.draw();
     }
 
     private void playAudioPlayer() {
