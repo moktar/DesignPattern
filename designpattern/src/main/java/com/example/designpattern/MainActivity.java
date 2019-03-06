@@ -29,6 +29,10 @@ import com.example.designpattern.structuralpattern.bridgepattern.GreenCircle;
 import com.example.designpattern.structuralpattern.bridgepattern.JavaQuestions;
 import com.example.designpattern.structuralpattern.bridgepattern.QuestionFormat;
 import com.example.designpattern.structuralpattern.bridgepattern.RedCircle;
+import com.example.designpattern.structuralpattern.compositepattern.Accountant;
+import com.example.designpattern.structuralpattern.compositepattern.BankManager;
+import com.example.designpattern.structuralpattern.compositepattern.Cashier;
+import com.example.designpattern.structuralpattern.compositepattern.Employee;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -63,8 +67,24 @@ public class MainActivity extends AppCompatActivity {
 //        getCustomerDetails();
 //        playAudioPlayer();
         // test bridge pattern
-        drawCircle();
-        makeQuestion();
+//        drawCircle();
+//        makeQuestion();
+        // test composite pattern
+        getEmployeeDetails();
+    }
+
+    private void getEmployeeDetails() {
+        Employee emp1=new Cashier(101,"Sohan Kumar", 20000.0);
+        Employee emp2=new Cashier(102,"Mohan Kumar", 25000.0);
+        Employee emp3=new Accountant(103,"Seema Mahiwal", 30000.0);
+        Employee manager1=new BankManager(100,"Ashwani Rajput",100000.0);
+
+        manager1.add(emp1);
+        manager1.add(emp2);
+        manager1.add(emp3);
+        manager1.print();
+
+        manager1.getChild(1);
     }
 
     private void makeQuestion() {
