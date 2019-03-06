@@ -1,17 +1,16 @@
-# Design Pattern
-Design Patterns in Java
+# Design Patterns in Java
 
-A design patterns are well-proved solution for solving the specific problem/task.
+A design patterns are **well-proved** solution for solving the specific problem/task.
 
 Now, a question will be arising in your mind what kind of specific problem? Let me explain by taking an example.
 
-Problem Given:
+### Problem Given:
 
 Suppose you want to create a class for which only a single instance (or object) should be created and that single object can be used by all other classes.
 
-Solution:
+### Solution:
 
-Singleton design pattern is the best solution of above specific problem. So, every design pattern has some specification or set of rules for solving the problems. What are those specifications, you will see later in the types of design patterns.
+**Singleton design pattern** is the best solution of above specific problem. So, every design pattern has **some specification or set of rules** for solving the problems. What are those specifications, you will see later in the types of design patterns.
 
 But remember one-thing, design patterns are programming language independent strategies for solving the common object-oriented design problems. That means, a design pattern represents an idea, not a particular implementation.
 
@@ -19,7 +18,7 @@ By using the design patterns you can make your code more flexible, reusable and 
 
 To become a professional software developer, you must know at least some popular solutions (i.e. design patterns) to the coding problems.
 
-Advantage of design pattern:
+## Advantage of design pattern:
 
 1. They are reusable in multiple projects.
 2. They provide the solutions that help to define the system architecture.
@@ -28,50 +27,52 @@ Advantage of design pattern:
 5. They are well-proved and testified solutions since they have been built upon the knowledge and experience of expert software developers.
 6. Design patterns don?t guarantee an absolute solution to a problem. They provide clarity to the system architecture and the possibility of building a better system.
 
-When should we use the design patterns?
+## When should we use the design patterns?
+
 We must use the design patterns during the analysis and requirement phase of SDLC(Software Development Life Cycle).
 
 Design patterns ease the analysis and requirement phase of SDLC by providing information based on prior hands-on experiences.
 
-Categorization of design patterns:
+## Categorization of design patterns:
+
 Basically, design patterns are categorized into two parts:
 
-Core Java (or JSE) Design Patterns.
-JEE Design Patterns.
+## Core Java (or JSE) Design Patterns.
+1. Core Java (or JSE) Design Patterns.
+1. JEE Design Patterns
 
-Core Java Design Patterns
 In core java, there are mainly three types of design patterns, which are further divided into their sub-parts:
-1. Creational Design Pattern
-      1. Factory Pattern
-      2. Abstract Factory Pattern
-      3. Singleton Pattern
-      4. Prototype Pattern
-      5. Builder Pattern.
+## 1. Creational Design Pattern
+1. Factory Pattern
+1. Abstract Factory Pattern
+1. Singleton Pattern
+1. Prototype Pattern
+1. Builder Pattern.
       
-2. Structural Design Pattern
-      1. Adapter Pattern
-      2. Bridge Pattern
-      3. Composite Pattern
-      4. Decorator Pattern
-      5. Facade Pattern
-      6. Flyweight Pattern
-      7. Proxy Pattern
-3. Behavioral Design Pattern
-      1. Chain Of Responsibility Pattern
-      2. Command Pattern
-      3. Interpreter Pattern
-      4. Iterator Pattern
-      5. Mediator Pattern
-      6. Memento Pattern
-      7. Observer Pattern
-      8. State Pattern
-      9. Strategy Pattern
-      10. Template Pattern
-      11. Visitor Pattern
+## 2. Structural Design Pattern
+1. Adapter Pattern
+1. Bridge Pattern
+1. Composite Pattern
+1. Decorator Pattern
+1. Facade Pattern
+1. Flyweight Pattern
+1. Proxy Pattern
+
+## 3. Behavioral Design Pattern
+1. Chain Of Responsibility Pattern
+1. Command Pattern
+1. Interpreter Pattern
+1. Iterator Pattern
+1. Mediator Pattern
+1. Memento Pattern
+1. Observer Pattern
+1. State Pattern
+1. Strategy Pattern
+1. Template Pattern
+1. Visitor Pattern
  
- To learn more details about design pattern, please view wiki of this reopository.
  
- # Creational design patterns
+ # 1. Creational design patterns
 
 Creational design patterns are concerned with **the way of creating objects**. These design patterns are used when a decision must be made at the time of instantiation of a class (i.e. creating an object of a class).
 
@@ -116,7 +117,7 @@ The Factory Method Pattern is also known as **Virtual Constructor**.
 
 ![](https://www.javatpoint.com/images/designpattern/factorymethod.jpg)
 
-# 2. Abstract Factory Pattern
+## 2. Abstract Factory Pattern
 
 Abstract Factory Pattern says that just **define an interface or abstract class for creating families of related (or dependent) objects but without specifying their concrete sub-classes**.That means Abstract Factory lets a class returns a factory of classes. So, this is the reason that Abstract Factory Pattern is one level higher than the Factory Pattern.
 
@@ -145,7 +146,7 @@ See the diagram carefully which is given below:
 
 ![](https://www.javatpoint.com/images/designpattern/abstractfactory.jpg)
 
-# 3. Singleton Pattern
+## 3. Singleton Pattern
 
 Singleton Pattern says that just **"define a class that has only one instance and provides a global point of access to it"**.
 
@@ -237,13 +238,13 @@ public class A implements Serializable {
   
 }  
 
-# 4. Prototype Pattern
+## 4. Prototype Pattern
 
 Prototype Pattern says that **cloning of an existing object instead of creating new one and can also be customized as per the requirement.**
 
 This pattern should be followed, if the cost of creating a new object is expensive and resource intensive.
 
-## Advantage of Prototype Pattern
+### Advantage of Prototype Pattern
 
 The main advantages of prototype pattern are as follows:
 
@@ -252,18 +253,18 @@ The main advantages of prototype pattern are as follows:
 * The clients can get new objects without knowing which type of object it will be.
 * It lets you add or remove objects at runtime.
 
-## Usage of Prototype Pattern
+### Usage of Prototype Pattern
 
 * When the classes are instantiated at runtime.
 * When the cost of creating an object is expensive or complicated.
 * When you want to keep the number of classes in an application minimum.
 * When the client application needs to be unaware of object creation and representation.
 
-## UML for Prototype Pattern
+### UML for Prototype Pattern
 
 ![](https://www.javatpoint.com/images/designpattern/prototype.jpg)
 
-# 5. Builder Pattern
+## 5. Builder Pattern
 
 Builder Pattern says that **"construct a complex object from simple objects using step-by-step approach"**
 
@@ -281,7 +282,7 @@ The main advantages of Builder Pattern are as follows:
 
 ![](https://www.javatpoint.com/images/designpattern/builderuml1.jpg)
 
-# 6. Object Pool Pattern
+## 6. Object Pool Pattern
 
 Mostly, performance is the key issue during the software development and the object creation, which may be a costly step.
 
@@ -338,4 +339,132 @@ Let's understand the example by the given UML diagram.
 
 ![](https://www.javatpoint.com/images/designpattern/objectpooluml.jpg)
 
+
+# 2. Structural design patterns
+
+**Structural design patterns** are concerned with how classes and objects can be composed, to form larger structures.
+
+The structural design patterns **simplifies the structure by identifying the relationships.**
+
+These patterns focus on, how the classes inherit from each other and how they are composed from other classes.
+
+## Types of structural design patterns
+
+There are following 7 types of structural design patterns.
+
+**1. Adapter Pattern**
+
+Adapting an interface into another according to client expectation.
+
+**2. Bridge Pattern**
+
+Separating abstraction (interface) from implementation.
+
+**3. Composite Pattern**
+
+Allowing clients to operate on hierarchy of objects.
+
+**4. Decorator Pattern**
+
+Adding functionality to an object dynamically.
+
+**5. Facade Pattern**
+
+Providing an interface to a set of interfaces.
+
+**6. Flyweight Pattern**
+
+Reusing an object by sharing it.
+
+**7. proxy Pattern**
+
+Representing another object.
+
+## 1. Adapter Pattern
+
+An Adapter Pattern says that just **"converts the interface of a class into another interface that a client wants".**
+
+In other words, to provide the interface according to client requirement while using the services of a class with a different interface.
+
+The Adapter Pattern is also known as **Wrapper**.
+
+### Advantage of Adapter Pattern
+
+* It allows two or more previously incompatible objects to interact.
+* It allows reusability of existing functionality.
+
+### Usage of Adapter pattern:
+
+It is used:
+
+* When an object needs to utilize an existing class with an incompatible interface.
+* When you want to create a reusable class that cooperates with classes which don't have compatible interfaces.
+* When you want to create a reusable class that cooperates with classes which don't have compatible interfaces.
+
+**Example of Adapter Pattern**
+
+Let's understand the example of adapter design pattern by the above UML diagram.
+
+### UML for Adapter Pattern:
+
+There are the following specifications for the adapter pattern:
+
+**Target Interface:** This is the desired interface class which will be used by the clients.
+
+**Adapter class:** This class is a wrapper class which implements the desired target interface and modifies the specific 
+request available from the Adaptee class.
+
+**Adaptee class:** This is the class which is used by the Adapter class to reuse the existing functionality and modify them for desired use.
+
+**Client:** This class will interact with the Adapter class.
+
+![](https://www.javatpoint.com/images/designpattern/adapteruml.jpg)
+
+## 2. Bridge Pattern
+
+A Bridge Pattern says that just **"decouple the functional abstraction from the implementation so that the two can vary independently".**
+
+The Bridge Pattern is also known as **Handle or Body.**
+
+Advantage of Bridge Pattern
+
+* It enables the separation of implementation from the interface.
+* It improves the extensibility.
+* It allows the hiding of implementation details from the client.
+
+Usage of Bridge Pattern
+
+* When you don't want a permanent binding between the functional abstraction and its implementation.
+* When both the functional abstraction and its implementation need to extended using sub-classes.
+* It is mostly used in those places where changes are made in the implementation does not affect the clients.
+
+
+next →← prev
+Bridge Pattern
+Bridge Design Pattern
+Advantage of Bridge DP
+Usage of Bridge DP
+UML of Bridge DP
+Example of Bridge DP
+A Bridge Pattern says that just "decouple the functional abstraction from the implementation so that the two can vary independently".
+
+The Bridge Pattern is also known as Handle or Body.
+
+Advantage of Bridge Pattern
+It enables the separation of implementation from the interface.
+It improves the extensibility.
+It allows the hiding of implementation details from the client.
+Usage of Bridge Pattern
+When you don't want a permanent binding between the functional abstraction and its implementation.
+When both the functional abstraction and its implementation need to extended using sub-classes.
+It is mostly used in those places where changes are made in the implementation does not affect the clients.
+
+ 
+### Example of Bridge Pattern
+
+The UML given below describes the example of bridge pattern.
+
+### UML for Bridge Pattern:
+
+![](https://www.javatpoint.com/images/designpattern/bridgeuml.jpg)
 
