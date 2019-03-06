@@ -438,18 +438,6 @@ Usage of Bridge Pattern
 * When both the functional abstraction and its implementation need to extended using sub-classes.
 * It is mostly used in those places where changes are made in the implementation does not affect the clients.
 
-
-next →← prev
-Bridge Pattern
-Bridge Design Pattern
-Advantage of Bridge DP
-Usage of Bridge DP
-UML of Bridge DP
-Example of Bridge DP
-A Bridge Pattern says that just "decouple the functional abstraction from the implementation so that the two can vary independently".
-
-The Bridge Pattern is also known as Handle or Body.
-
 Advantage of Bridge Pattern
 It enables the separation of implementation from the interface.
 It improves the extensibility.
