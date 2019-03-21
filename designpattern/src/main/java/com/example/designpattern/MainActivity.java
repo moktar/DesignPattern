@@ -33,6 +33,10 @@ import com.example.designpattern.structuralpattern.compositepattern.Accountant;
 import com.example.designpattern.structuralpattern.compositepattern.BankManager;
 import com.example.designpattern.structuralpattern.compositepattern.Cashier;
 import com.example.designpattern.structuralpattern.compositepattern.Employee;
+import com.example.designpattern.structuralpattern.decoratorpattern.ChineeseFood;
+import com.example.designpattern.structuralpattern.decoratorpattern.Food;
+import com.example.designpattern.structuralpattern.decoratorpattern.NonVegFood;
+import com.example.designpattern.structuralpattern.decoratorpattern.VegFood;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -43,41 +47,88 @@ public class MainActivity extends AppCompatActivity {
         /**
          * To view output of these design pattern select logcat tab then select info from dropdown menu
          * and search the specific log tag name.
-         * Java creational design pattern
+         */
+
+        /**
+         * Creational design pattern
          */
         // test factory pattern
 //        generateShapes();
 //        makePlanes();
+
         // test abstract factory pattern
 //        makeLoan();
+
         // test singleton pattern
 //        createSingleObject();
 //        createSingleInstance();
+
         // test prototype pattern
 //        clonePrototype();
+
         // test builder pattern
 //        makeFastFood();
 //        makeCD();
+
         // test object pool pattern
 //        executeObjectPool();
         /**
-         * Java structural design pattern
+         * Structural design pattern
          */
         // test adapter pattern
 //        getCustomerDetails();
 //        playAudioPlayer();
+
         // test bridge pattern
 //        drawCircle();
 //        makeQuestion();
+
         // test composite pattern
-        getEmployeeDetails();
+//        getEmployeeDetails();
+
+        // test decorator pattern
+        makeFood();
+
+    }
+
+    private void makeFood() {
+        Log.i("Food: ", "========= Food Menu ============ \n");
+        Log.i("Food: ", "            1. Vegetarian Food.   \n");
+        Log.i("Food: ", "            2. Non-Vegetarian Food.\n");
+        Log.i("Food: ", "            3. Chineese Food.         \n");
+        Log.i("Food: ", "            4. Exit                        \n");
+
+        int choice = 1; // change the  value 1/2/3
+        switch (choice) {
+            case 1: {
+                VegFood vf = new VegFood();
+                Log.i("Food: ", vf.prepareFood());
+                Log.i("Food: ", String.valueOf(vf.foodPrice()));
+            }
+            break;
+            case 2: {
+                Food f1 = new NonVegFood((Food) new VegFood());
+                Log.i("Food: ", f1.prepareFood());
+                Log.i("Food: ", String.valueOf(f1.foodPrice()));
+            }
+            case 3: {
+                Food f2 = new ChineeseFood((Food) new VegFood());
+                Log.i("Food: ", f2.prepareFood());
+                Log.i("Food: ", String.valueOf(f2.foodPrice()));
+            }
+            break;
+
+            default: {
+                Log.i("Food: ", "Other than these no food available");
+            }
+        }
     }
 
     private void getEmployeeDetails() {
-        Employee emp1=new Cashier(101,"Sohan Kumar", 20000.0);
-        Employee emp2=new Cashier(102,"Mohan Kumar", 25000.0);
-        Employee emp3=new Accountant(103,"Seema Mahiwal", 30000.0);
-        Employee manager1=new BankManager(100,"Ashwani Rajput",100000.0);
+        Employee emp1 = new Cashier(101, "Sohan Kumar", 20000.0);
+        Employee emp2 = new Cashier(102, "Mohan Kumar", 25000.0);
+        Employee emp3 = new Accountant(103, "Seema Mahiwal", 30000.0);
+        Employee manager1 = new BankManager(100, "Ashwani Rajput", 100000.0);
 
         manager1.add(emp1);
         manager1.add(emp2);
@@ -99,8 +150,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void drawCircle() {
-        CircleShape redCircle = new Circle(100,100, 10, new RedCircle());
-        CircleShape greenCircle = new Circle(100,100, 10, new GreenCircle());
+        CircleShape redCircle = new Circle(100, 100, 10, new RedCircle());
+        CircleShape greenCircle = new Circle(100, 100, 10, new GreenCircle());
 
         redCircle.draw();
         greenCircle.draw();
@@ -122,18 +173,18 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void executeObjectPool() {
-        ObjectPoolDemo op=new ObjectPoolDemo();
+        ObjectPoolDemo op = new ObjectPoolDemo();
         op.setUp();
         op.tearDown();
         op.testObjectPool();
     }
 
     private void makeCD() {
-        CDBuilder cdBuilder=new CDBuilder();
-        CDType cdType1=cdBuilder.buildSonyCD();
+        CDBuilder cdBuilder = new CDBuilder();
+        CDType cdType1 = cdBuilder.buildSonyCD();
         cdType1.showItems();
 
-        CDType cdType2=cdBuilder.buildSamsungCD();
+        CDType cdType2 = cdBuilder.buildSamsungCD();
         cdType2.showItems();
     }
 
