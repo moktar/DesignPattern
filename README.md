@@ -577,3 +577,26 @@ Let's understand the example of facade design pattern by the above UML diagram.
 ### UML for Facade Pattern:
 
 ![](https://www.javatpoint.com/images/designpattern/facadeuml.jpg)
+
+## 6. Flyweight Pattern
+
+A Flyweight Pattern says that just **"to reuse already existing similar kind of objects by storing them and create new object when no matching object is found".**
+
+### Advantage of Flyweight Pattern
+
+* It reduces the number of objects.
+* It reduces the amount of memory and storage devices required if the objects are persisted
+
+### Usage of Flyweight Pattern
+
+* When an application uses number of objects
+* When the storage cost is high because of the quantity of objects.
+* When the application does not depend on object identity.
+
+### Example of Flyweight Pattern
+
+Let's understand the example of flyweight design pattern by the above UML diagram.
+
+### UML for Flyweight Pattern:
+
+![](https://cdncontribute.geeksforgeeks.org/wp-content/uploads/flyweight.jpg)
