@@ -37,8 +37,17 @@ import com.example.designpattern.structuralpattern.decoratorpattern.ChineeseFood
 import com.example.designpattern.structuralpattern.decoratorpattern.Food;
 import com.example.designpattern.structuralpattern.decoratorpattern.NonVegFood;
 import com.example.designpattern.structuralpattern.decoratorpattern.VegFood;
+import com.example.designpattern.structuralpattern.facadepattern.ShopKeeper;
+import com.example.designpattern.structuralpattern.flyweightpattern.Player;
+import com.example.designpattern.structuralpattern.flyweightpattern.PlayerFactory;
+
+import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
+    // All player types and weopons (used by getRandPlayerType()
+    // and getRandWeapon()
+    private static String[] playerType = {"Terrorist", "CounterTerrorist"};
+    private static String[] weapons = {"AK-47", "Maverick", "Gut Knife", "Desert Eagle"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -87,8 +96,81 @@ public class MainActivity extends AppCompatActivity {
 //        getEmployeeDetails();
 
         // test decorator pattern
-        makeFood();
+//        makeFood();
 
+        // test facade pattern
+        purchsedMobilePhone();//
+
+        // test flyweight pattern
+        playGame();
+    }
+
+    private void playGame() {
+        /* Assume that we have a total of 10 players
+           in the game. */
+        for (int i = 0; i < 10; i++) {
+            /* getPlayer() is called simply using the class
+               name since the method is a static one */
+            Player p = PlayerFactory.getPlayer(getRandPlayerType());
+
+            /* Assign a weapon chosen randomly uniformly
+               from the weapon array  */
+            p.assignWeapon(getRandWeapon());
+
+            // Send this player on a mission
+            p.mission();
+        }
+    }
+
+    // Utility methods to get a random player type and
+    // weapon
+    public String getRandPlayerType() {
+        Random r = new Random();
+
+        // Will return an integer between [0,2)
+        int randInt = r.nextInt(playerType.length);
+
+        // return the player stored at index 'randInt'
+        return playerType[randInt];
+    }
+
+    public String getRandWeapon() {
+        Random r = new Random();
+
+        // Will return an integer between [0,5)
+        int randInt = r.nextInt(weapons.length);
+
+        // Return the weapon stored at index 'randInt'
+        return weapons[randInt];
+    }
+
+    private void purchsedMobilePhone() {
+        Log.i("Mobile Shop: ", "========= Mobile Shop ============ \n");
+        Log.i("Mobile Shop: ", "            1. IPHONE.              \n");
+        Log.i("Mobile Shop: ", "            2. SAMSUNG.              \n");
+        Log.i("Mobile Shop: ", "            3. BLACKBERRY.            \n");
+        Log.i("Mobile Shop: ", "            4. Exit.                     \n");
+        Log.i("Mobile Shop: ", "Enter your choice: ");
+
+        ShopKeeper sk = new ShopKeeper();
+        int choice = 1; // change the values for different tested like as 1/2/3
+        switch (choice) {
+            case 1: {
+                sk.iphoneSale();
+            }
+            break;
+            case 2: {
+                sk.samsungSale();
+            }
+            break;
+            case 3: {
+                sk.blackberrySale();
+            }
+            break;
+            default: {
+                System.out.println("Nothing You purchased");
+            }
+        }
     }
 
     private void makeFood() {
