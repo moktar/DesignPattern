@@ -40,6 +40,8 @@ import com.example.designpattern.structuralpattern.decoratorpattern.VegFood;
 import com.example.designpattern.structuralpattern.facadepattern.ShopKeeper;
 import com.example.designpattern.structuralpattern.flyweightpattern.Player;
 import com.example.designpattern.structuralpattern.flyweightpattern.PlayerFactory;
+import com.example.designpattern.structuralpattern.proxypattern.OfficeInternetAccess;
+import com.example.designpattern.structuralpattern.proxypattern.ProxyInternetAccess;
 
 import java.util.Random;
 
@@ -99,10 +101,18 @@ public class MainActivity extends AppCompatActivity {
 //        makeFood();
 
         // test facade pattern
-        purchsedMobilePhone();//
+//        purchsedMobilePhone();
 
         // test flyweight pattern
-        playGame();
+//        playGame();
+
+        // test proxy pattern
+        accessInternet();
+    }
+
+    private void accessInternet() {
+        OfficeInternetAccess access = new ProxyInternetAccess("Moktar Hossain");
+        access.grantInternetAccess();
     }
 
     private void playGame() {
