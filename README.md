@@ -550,3 +550,53 @@ It is used:
 ![](https://www.javatpoint.com/images/designpattern/decoratoruml.jpg)
 
 
+## 5. Facade Pattern
+
+A Facade Pattern says that just **"just provide a unified and simplified interface to a set of interfaces in a subsystem, therefore it hides the complexities of the subsystem from the client".**
+
+In other words, Facade Pattern describes a higher-level interface that makes the sub-system easier to use.
+
+Practically, **every Abstract Factory is a type of Facade.**
+
+### Advantage of Facade Pattern
+
+* It shields the clients from the complexities of the sub-system components.
+* It promotes loose coupling between subsystems and its clients.
+
+### Usage of Facade Pattern:
+
+It is used:
+
+* When you want to provide simple interface to a complex sub-system.
+* When several dependencies exist between clients and the implementation classes of an abstraction.
+
+### Example of Facade Pattern
+
+Let's understand the example of facade design pattern by the above UML diagram.
+
+### UML for Facade Pattern:
+
+![](https://www.javatpoint.com/images/designpattern/facadeuml.jpg)
+
+## 6. Flyweight Pattern
+
+A Flyweight Pattern says that just **"to reuse already existing similar kind of objects by storing them and create new object when no matching object is found".**
+
+### Advantage of Flyweight Pattern
+
+* It reduces the number of objects.
+* It reduces the amount of memory and storage devices required if the objects are persisted
+
+### Usage of Flyweight Pattern
+
+* When an application uses number of objects
+* When the storage cost is high because of the quantity of objects.
+* When the application does not depend on object identity.
+
+### Example of Flyweight Pattern
+
+Let's understand the example of flyweight design pattern by the above UML diagram.
+
+### UML for Flyweight Pattern:
+
+![](https://cdncontribute.geeksforgeeks.org/wp-content/uploads/flyweight.jpg)
