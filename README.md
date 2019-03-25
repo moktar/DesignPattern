@@ -632,4 +632,54 @@ Let's understand the example of proxy design pattern by the above UML diagram.
 
 ![](https://www.javatpoint.com/images/designpattern/proxyuml.jpg)
 
+# 3. Behavioral Design Patterns
 
+Behavioral design patterns are concerned with **the interaction and responsibility of objects.**
+
+In these design patterns,**the interaction between the objects should be in such a way that they can easily talk to each other and still should be loosely coupled.**
+
+That means the implementation and the client should be loosely coupled in order to avoid hard coding and dependencies.
+
+### There are 12 types of structural design patterns:
+
+* Chain of Responsibility Pattern
+* Command Pattern
+* Interpreter Pattern
+* Iterator Pattern
+* Mediator Pattern
+* Memento Pattern
+* Observer Pattern
+* State Pattern
+* Strategy Pattern
+* Template Pattern
+* Visitor Pattern
+* Null Object
+
+## 1. Chain Of Responsibility Pattern
+
+In chain of responsibility, sender sends a request to a chain of objects. The request can be handled by any object in the chain.
+
+A Chain of Responsibility Pattern says that just **"avoid coupling the sender of a request to its receiver by giving multiple objects a chance to handle the request".** For example, an ATM uses the Chain of Responsibility design pattern in money giving process.
+
+In other words, we can say that normally each receiver contains reference of another receiver. If one object cannot handle the request then it passes the same to the next receiver and so on.
+
+### Advantage of Chain of Responsibility Pattern
+
+* It reduces the coupling.
+* It adds flexibility while assigning the responsibilities to objects.
+* It allows a set of classes to act as one; events produced in one class can be sent to other handler classes with the help of composition.
+
+### Usage of Chain of Responsibility Pattern:
+
+It is used:
+
+* When more than one object can handle a request and the handler is unknown.
+* When the group of objects that can handle the request must be specified in dynamic way.
+
+### Example of Chain of Responsibility Pattern
+
+Let's understand the example of Chain of Responsibility Pattern by the above UML diagram.
+
+### UML for Chain of Responsibility Pattern:
+
+![](https://www.javatpoint.com/images/designpattern/chainofresponsibilityuml.jpg)
