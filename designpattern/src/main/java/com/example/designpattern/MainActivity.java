@@ -8,6 +8,15 @@ import com.example.designpattern.behavioralpattern.chainofresponsibilitypattern.
 import com.example.designpattern.behavioralpattern.chainofresponsibilitypattern.DebugBasedLogger;
 import com.example.designpattern.behavioralpattern.chainofresponsibilitypattern.ErrorBasedLogger;
 import com.example.designpattern.behavioralpattern.chainofresponsibilitypattern.Logger;
+import com.example.designpattern.behavioralpattern.commandpattern.ActionListernerCommand;
+import com.example.designpattern.behavioralpattern.commandpattern.ActionOpen;
+import com.example.designpattern.behavioralpattern.commandpattern.ActionSave;
+import com.example.designpattern.behavioralpattern.commandpattern.Broker;
+import com.example.designpattern.behavioralpattern.commandpattern.BuyStock;
+import com.example.designpattern.behavioralpattern.commandpattern.Document;
+import com.example.designpattern.behavioralpattern.commandpattern.MenuOptions;
+import com.example.designpattern.behavioralpattern.commandpattern.SellStock;
+import com.example.designpattern.behavioralpattern.commandpattern.Stock;
 import com.example.designpattern.creationalpattern.abstractfactorypattern.AbstractFactory;
 import com.example.designpattern.creationalpattern.abstractfactorypattern.Bank;
 import com.example.designpattern.creationalpattern.abstractfactorypattern.FactoryCreator;
@@ -117,8 +126,36 @@ public class MainActivity extends AppCompatActivity {
          * Behavioral design pattern
          */
         // test chain of responsibility pattern
-        viewLogInfo();
+//        viewLogInfo();
 
+        // test command pattern
+//        executeDocument();
+        executeStock();
+    }
+
+    private void executeStock() {
+        Stock abcStock = new Stock();
+
+        BuyStock buyStockOrder = new BuyStock(abcStock);
+        SellStock sellStockOrder = new SellStock(abcStock);
+
+        Broker broker = new Broker();
+        broker.takeOrder(buyStockOrder);
+        broker.takeOrder(sellStockOrder);
+
+        broker.placeOrders();
+    }
+
+    private void executeDocument() {
+        Document doc = new Document();
+
+        ActionListernerCommand clickOpen = new ActionOpen(doc);
+        ActionListernerCommand clickSave = new ActionSave(doc);
+
+        MenuOptions menu = new MenuOptions(clickOpen, clickSave);
+
+        menu.clickOpen();
+        menu.clickSave();
     }
 
     private void viewLogInfo() {
