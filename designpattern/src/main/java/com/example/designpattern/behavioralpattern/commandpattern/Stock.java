@@ -3,7 +3,6 @@ package com.example.designpattern.behavioralpattern.commandpattern;
 import android.util.Log;
 
 public class Stock {
-
     private String name = "ABC";
     private int quantity = 10;
 

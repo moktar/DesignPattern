@@ -5,7 +5,6 @@ import android.util.Log;
 public class Document {
 
     public void open(){
-
         Log.i("Document: ","Document Opened");
     }
     public void save(){
