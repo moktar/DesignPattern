@@ -17,6 +17,11 @@ import com.example.designpattern.behavioralpattern.commandpattern.Document;
 import com.example.designpattern.behavioralpattern.commandpattern.MenuOptions;
 import com.example.designpattern.behavioralpattern.commandpattern.SellStock;
 import com.example.designpattern.behavioralpattern.commandpattern.Stock;
+import com.example.designpattern.behavioralpattern.interpreterpattern.AndExpression;
+import com.example.designpattern.behavioralpattern.interpreterpattern.Expression;
+import com.example.designpattern.behavioralpattern.interpreterpattern.InfixToPostfixPattern;
+import com.example.designpattern.behavioralpattern.interpreterpattern.OrExpression;
+import com.example.designpattern.behavioralpattern.interpreterpattern.TerminalExpression;
 import com.example.designpattern.creationalpattern.abstractfactorypattern.AbstractFactory;
 import com.example.designpattern.creationalpattern.abstractfactorypattern.Bank;
 import com.example.designpattern.creationalpattern.abstractfactorypattern.FactoryCreator;
@@ -129,8 +134,46 @@ public class MainActivity extends AppCompatActivity {
 //        viewLogInfo();
 
         // test command pattern
-        executeDocument();
-        executeStock();
+//        executeDocument();
+//        executeStock();
+
+        // test interpreter pattern
+        interpreted();
+        translated();
+    }
+
+    private void translated() {
+
+        Expression isMale = getMaleExpression();
+        Expression isMarriedWoman = getMarriedWomanExpression();
+
+        Log.i("Translated: ","John is male? " + isMale.interpret("John"));
+        Log.i("Translated: ","Julie is a married women? " + isMarriedWoman.interpret("Married Julie"));
+    }
+
+    //Rule: Robert and John are male
+    public static Expression getMaleExpression(){
+        Expression robert = new TerminalExpression("Robert");
+        Expression john = new TerminalExpression("John");
+        return new OrExpression(robert, john);
+    }
+
+    //Rule: Julie is a married women
+    public static Expression getMarriedWomanExpression(){
+        Expression julie = new TerminalExpression("Julie");
+        Expression married = new TerminalExpression("Married");
+        return new AndExpression(julie, married);
+    }
+
+    private void interpreted() {
+
+        String infix = "a+b*c";
+
+        InfixToPostfixPattern ip=new InfixToPostfixPattern();
+
+        String postfix = ip.conversion(infix);
+        Log.i("Interpreted: ","Infix:   " + infix);
+        Log.i("Interpreted: ","Postfix: " + postfix);
     }
 
     private void executeStock() {
