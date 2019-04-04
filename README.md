@@ -719,3 +719,30 @@ Let's understand the example of adapter design pattern by the above UML diagram.
 
 ![](https://www.javatpoint.com/images/designpattern/commanduml.jpg)
 
+## 4. Iterator Pattern
+
+According to GoF, Iterator Pattern is used **"to access the elements of an aggregate object sequentially without exposing its underlying implementation".**
+
+The Iterator pattern is also known as **Cursor**.
+
+In collection framework, we are now using Iterator that is preferred over Enumeration.
+
+### Advantage of Iterator Pattern
+
+* It supports variations in the traversal of a collection.
+* It simplifies the interface to the collection.
+
+Usage of Iterator Pattern:
+
+It is used:
+
+* When you want to access a collection of objects without exposing its internal representation.
+* When there are multiple traversals of objects need to be supported in the collection.
+
+### Example of Iterator Pattern
+
+Let's understand the example of iterator pattern pattern by the above UML diagram.
+
+### UML for Iterator Pattern:
+
+![](https://www.javatpoint.com/images/designpattern/iteratoruml.jpg)
