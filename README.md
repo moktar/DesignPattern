@@ -774,3 +774,56 @@ Let's understand the example of iterator pattern pattern by the above UML diagra
 ### UML for Iterator Pattern:
 
 ![](https://www.javatpoint.com/images/designpattern/iteratoruml.jpg)
+
+## 5. Mediator Pattern
+
+A Mediator Pattern says that **"to define an object that encapsulates how a set of objects interact".**
+
+I will explain the Mediator pattern by considering a problem. When we begin with development, we have a few classes and these classes interact with each other producing results. Now, consider slowly, the logic becomes more complex when functionality increases. Then what happens? We add more classes and they still interact with each other but it gets really difficult to maintain this code now. So, Mediator pattern takes care of this problem.
+
+Mediator pattern is used to reduce communication complexity between multiple objects or classes. This pattern provides a mediator class which normally handles all the communications between different classes and supports easy maintainability of the code by loose coupling.
+
+### Benefits:
+
+* It decouples the number of classes.
+* It simplifies object protocols.
+* It centralizes the control.
+* The individual components become simpler and much easier to deal with because they don't need to pass messages to one another.
+* The components don't need to contain logic to deal with their intercommunication and therefore, they are more generic.
+
+### Usage:
+
+* It is commonly used in message-based systems likewise chat applications.
+* When the set of objects communicate in complex but in well-defined ways.
+
+![](https://www.javatpoint.com/images/designpattern/mediator-pattern.png)
+
+### Participants:
+
+* **ApnaChatroom :**- defines the interface for interacting with participants.
+* **ApnaChatroomImpl :**- implements the operations defined by the Chatroom interface. The operations are managing the interactions between the objects: when one participant sends a message, the message is sent to the other participants.
+* **Participant :**- defines an interface for the users involved in chatting.
+* **User1, User2, ...UserN :**- implements Participant interface; the participant can be a number of users involved in chatting. But each Participant will keep only a reference to the ApnaChatRoom.
+
+## 6. Memento Pattern
+
+A Memento Pattern says that "to restore the state of an object to its previous state". But it must do this without violating Encapsulation. Such case is useful in case of error or failure.
+
+The Memento pattern is also known as **Token**.
+
+Undo or backspace or ctrl+z is one of the most used operation in an editor. Memento design pattern is used to implement the undo operation. This is done by saving the current state of the object as it changes state.
+
+### Benefits:
+
+* It preserves encapsulation boundaries.
+* It simplifies the originator.
+
+### Usage:
+
+* It is used in Undo and Redo operations in most software.
+* It is also used in database transactions.
+
+### UML for Memento Pattern:
+
+![](https://www.javatpoint.com/images/designpattern/memento-pattern.png)
+
