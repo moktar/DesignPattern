@@ -24,6 +24,12 @@ import com.example.designpattern.behavioralpattern.interpreterpattern.OrExpressi
 import com.example.designpattern.behavioralpattern.interpreterpattern.TerminalExpression;
 import com.example.designpattern.behavioralpattern.iteratorpattern.CollectionOfNames;
 import com.example.designpattern.behavioralpattern.iteratorpattern.Iterator;
+import com.example.designpattern.behavioralpattern.mediatorpattern.ApnaChatRoom;
+import com.example.designpattern.behavioralpattern.mediatorpattern.ApnaChatRoomImpl;
+import com.example.designpattern.behavioralpattern.mediatorpattern.User1;
+import com.example.designpattern.behavioralpattern.mediatorpattern.User2;
+import com.example.designpattern.behavioralpattern.mementopattern.Caretaker;
+import com.example.designpattern.behavioralpattern.mementopattern.Originator;
 import com.example.designpattern.creationalpattern.abstractfactorypattern.AbstractFactory;
 import com.example.designpattern.creationalpattern.abstractfactorypattern.Bank;
 import com.example.designpattern.creationalpattern.abstractfactorypattern.FactoryCreator;
@@ -143,8 +149,49 @@ public class MainActivity extends AppCompatActivity {
 //        interpreted();
 //        translated();
 
-        // iterator pattern
-        getNames();
+        // test iterator pattern
+//        getNames();
+
+        // test mediator pattern
+//        displayMessage();
+
+        // test memento pattern
+        doMemento();
+    }
+
+    private void doMemento() {
+        Originator originator = new Originator();
+
+        Caretaker careTaker = new Caretaker();
+
+        originator.setState("State #1");
+        careTaker.add(originator.saveStateToMemento());
+        originator.setState("State #2");
+        careTaker.add(originator.saveStateToMemento());
+        originator.setState("State #3");
+        careTaker.add(originator.saveStateToMemento());
+        originator.setState("State #4");
+
+        Log.i("Memento: ","Current State: " + originator.getState());
+        originator.getStateFromMemento(careTaker.get(0));
+        Log.i("Memento: ","First saved State: " + originator.getState());
+        originator.getStateFromMemento(careTaker.get(1));
+        Log.i("Memento: ","Second saved State: " + originator.getState());
+        originator.getStateFromMemento(careTaker.get(2));
+        Log.i("Memento: ","Third saved State: " + originator.getState());
+    }
+
+    private void displayMessage() {
+        ApnaChatRoom chat = new ApnaChatRoomImpl();
+
+        User1 u1=new User1(chat);
+        u1.setname("Moktar Hossain");
+        u1.sendMsg("Hi Razzak! how are you?");
+
+
+        User2 u2=new User2(chat);
+        u2.setname("Mamun Rashid");
+        u2.sendMsg("I am Fine ! You tell?");
     }
 
     private void getNames() {
