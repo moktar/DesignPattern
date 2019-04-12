@@ -30,6 +30,13 @@ import com.example.designpattern.behavioralpattern.mediatorpattern.User1;
 import com.example.designpattern.behavioralpattern.mediatorpattern.User2;
 import com.example.designpattern.behavioralpattern.mementopattern.Caretaker;
 import com.example.designpattern.behavioralpattern.mementopattern.Originator;
+import com.example.designpattern.behavioralpattern.observerpattern.BinaryObserver;
+import com.example.designpattern.behavioralpattern.observerpattern.EventSource;
+import com.example.designpattern.behavioralpattern.observerpattern.HexaObserver;
+import com.example.designpattern.behavioralpattern.observerpattern.OctalObserver;
+import com.example.designpattern.behavioralpattern.observerpattern.ResponseHandler1;
+import com.example.designpattern.behavioralpattern.observerpattern.ResponseHandler2;
+import com.example.designpattern.behavioralpattern.observerpattern.Subject;
 import com.example.designpattern.creationalpattern.abstractfactorypattern.AbstractFactory;
 import com.example.designpattern.creationalpattern.abstractfactorypattern.Bank;
 import com.example.designpattern.creationalpattern.abstractfactorypattern.FactoryCreator;
@@ -156,7 +163,46 @@ public class MainActivity extends AppCompatActivity {
 //        displayMessage();
 
         // test memento pattern
-        doMemento();
+//        doMemento();
+
+        // test observer pattern
+//        createObserver();
+        createObserver2();
+    }
+
+    private void createObserver2() {
+        Subject subject = new Subject();
+
+        new HexaObserver(subject);
+        new OctalObserver(subject);
+        new BinaryObserver(subject);
+
+        Log.i("Change: ","First state change: 15");
+        subject.setState(15);
+        Log.i("Change: ","Second state change: 10");
+        subject.setState(10);
+    }
+
+    private void createObserver() {
+        // create an event source - reads from stdin
+        final EventSource eventSource = new EventSource("Change the text as your wish to change the event");// Observer has been changed
+
+        // create first observer
+        final ResponseHandler1 responseHandler1 = new ResponseHandler1();
+
+        // subscribe the observer to the event source
+        eventSource.addObserver(responseHandler1);
+
+
+        // create second observer
+        final ResponseHandler2 responseHandler2 = new ResponseHandler2();
+
+        // subscribe the observer to the event source
+        eventSource.addObserver(responseHandler2);
+
+        // starts the event thread
+        Thread thread = new Thread(eventSource);
+        thread.start();
     }
 
     private void doMemento() {
