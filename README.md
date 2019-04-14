@@ -419,7 +419,7 @@ request available from the Adaptee class.
 
 **Client:** This class will interact with the Adapter class.
 
-![](https://www.javatpoint.com/images/designpattern/adapteruml.jpg)
+![](https://github.com/moktar/DesignPattern/blob/master/designpattern/src/main/res/drawable/adapteruml.jpg)
 
 ## 2. Bridge Pattern
 
@@ -455,7 +455,7 @@ The UML given below describes the example of bridge pattern.
 
 ### UML for Bridge Pattern:
 
-![](https://www.javatpoint.com/images/designpattern/bridgeuml.jpg)
+![](https://github.com/moktar/DesignPattern/blob/master/designpattern/src/main/res/drawable/bridgeuml.jpg)
 
 ## 3. Composite Pattern
 
@@ -476,7 +476,7 @@ It is used:
 
 ### UML for Composite Pattern
 
-![](https://www.javatpoint.com/images/designpattern/compositeuml1.jpg)
+![](https://github.com/moktar/DesignPattern/blob/master/designpattern/src/main/res/drawable/compositeuml1.jpg)
 
 ### Elements used in Composite Pattern:
 
@@ -548,7 +548,7 @@ It is used:
 
 ### UML for Decorator Pattern:
 
-![](https://www.javatpoint.com/images/designpattern/decoratoruml.jpg)
+![](https://github.com/moktar/DesignPattern/blob/master/designpattern/src/main/res/drawable/decoratoruml.jpg)
 
 
 ## 5. Facade Pattern
@@ -577,7 +577,7 @@ Let's understand the example of facade design pattern by the above UML diagram.
 
 ### UML for Facade Pattern:
 
-![](https://www.javatpoint.com/images/designpattern/facadeuml.jpg)
+![](https://github.com/moktar/DesignPattern/blob/master/designpattern/src/main/res/drawable/facadeuml.jpg)
 
 ## 6. Flyweight Pattern
 
@@ -600,7 +600,7 @@ Let's understand the example of flyweight design pattern by the above UML diagra
 
 ### UML for Flyweight Pattern:
 
-![](https://cdncontribute.geeksforgeeks.org/wp-content/uploads/flyweight.jpg)
+![](https://github.com/moktar/DesignPattern/blob/master/designpattern/src/main/res/drawable/flyweight.jpg)
 
 ## 7. Proxy Pattern
 
