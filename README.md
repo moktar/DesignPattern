@@ -115,7 +115,7 @@ The Factory Method Pattern is also known as **Virtual Constructor**.
 * We are going to create a Plan abstract class and concrete classes that extends the Plan abstract class. A factory class GetPlanFactory is defined as a next step.
 * GenerateBill class will use GetPlanFactory to get a Plan object. It will pass information (DOMESTICPLAN / COMMERCIALPLAN / INSTITUTIONALPLAN) to GetPalnFactory to get the type of object it needs.
 
-![](https://www.javatpoint.com/images/designpattern/factorymethod.jpg)
+![](https://github.com/moktar/DesignPattern/blob/master/designpattern/src/main/res/drawable/factorymethod.jpg)
 
 
 ## 2. Abstract Factory Pattern
@@ -166,7 +166,7 @@ There are two forms of singleton design pattern
 
 ### Uml of Singleton design pattern
 
-![](https://www.javatpoint.com/images/designpattern/singleton.jpg)
+![](https://github.com/moktar/DesignPattern/blob/master/designpattern/src/main/res/drawable/singleton.jpg)
 
 ### How to create Singleton design pattern?
 
@@ -263,7 +263,7 @@ The main advantages of prototype pattern are as follows:
 
 ### UML for Prototype Pattern
 
-![](https://www.javatpoint.com/images/designpattern/prototype.jpg)
+![](https://github.com/moktar/DesignPattern/blob/master/designpattern/src/main/res/drawable/prototype.jpg)
 
 ## 5. Builder Pattern
 
@@ -281,7 +281,7 @@ The main advantages of Builder Pattern are as follows:
 
 ### UML for Builder Pattern Example
 
-![](https://www.javatpoint.com/images/designpattern/builderuml1.jpg)
+![](https://github.com/moktar/DesignPattern/blob/master/designpattern/src/main/res/drawable/builderuml1.jpg)
 
 ## 6. Object Pool Pattern
 
@@ -338,7 +338,7 @@ Let's understand the example by the given UML diagram.
 
 ### UML for Object Pool Pattern
 
-![](https://www.javatpoint.com/images/designpattern/objectpooluml.jpg)
+![](https://github.com/moktar/DesignPattern/blob/master/designpattern/src/main/res/drawable/objectpooluml.jpg)
 
 
 # 2. Structural design patterns
