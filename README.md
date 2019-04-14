@@ -845,3 +845,65 @@ The Memento pattern is also known as Dependents or Publish-Subscribe.
 ### UML for Observer Pattern:
 
 ![](https://www.javatpoint.com/images/designpattern/observer-pattern.png)
+
+## 8. State Pattern
+
+A State Pattern says that "the class behavior changes based on its state". In State Pattern, we create objects which represent various states and a context object whose behavior varies as its state object changes.
+
+The State Pattern is also known as Objects for States.
+
+### Benefits:
+
+* It keeps the state-specific behavior.
+* It makes any state transitions explicit.
+
+### Usage:
+
+* When the behavior of object depends on its state and it must be able to change its behavior at runtime according to the new state.
+* It is used when the operations have large, multipart conditional statements that depend on the state of an object.
+
+### UML for State Pattern:
+
+![](https://www.javatpoint.com/images/designpattern/state-pattern.png)
+
+## 9. Strategy Pattern
+
+A Strategy Pattern says that "defines a family of functionality, encapsulate each one, and make them interchangeable".
+
+The Strategy Pattern is also known as Policy
+
+### Benefits:
+
+* It provides a substitute to subclassing.
+* It defines each behavior within its own class, eliminating the need for conditional statements.
+* It makes it easier to extend and incorporate new behavior without changing the application.
+
+### Usage:
+
+* When the multiple classes differ only in their behaviors.e.g. Servlet API.
+* It is used when you need different variations of an algorithm.
+
+### UML for Strategy Pattern:
+
+![](https://www.javatpoint.com/images/designpattern/strategy-pattern3.png)
+
+
+## 10. Template Pattern
+
+A Template Pattern says that "just define the skeleton of a function in an operation, deferring some steps to its subclasses".
+
+
+### Benefits:
+
+* It is very common technique for reusing the code.This is only the main benefit of it.
+
+### Usage:
+
+* It is used when the common behavior among sub-classes should be moved to a single common class by avoiding the duplication.
+
+### UML for Template Pattern:
+
+![](https://www.javatpoint.com/images/designpattern/template-pattern.png)
+
+
+
