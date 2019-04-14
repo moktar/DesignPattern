@@ -37,6 +37,14 @@ import com.example.designpattern.behavioralpattern.observerpattern.OctalObserver
 import com.example.designpattern.behavioralpattern.observerpattern.ResponseHandler1;
 import com.example.designpattern.behavioralpattern.observerpattern.ResponseHandler2;
 import com.example.designpattern.behavioralpattern.observerpattern.Subject;
+import com.example.designpattern.behavioralpattern.statepattern.StatePatternDemo;
+import com.example.designpattern.behavioralpattern.strategypattern.Addition;
+import com.example.designpattern.behavioralpattern.strategypattern.Context;
+import com.example.designpattern.behavioralpattern.strategypattern.Multiplication;
+import com.example.designpattern.behavioralpattern.strategypattern.Subtraction;
+import com.example.designpattern.behavioralpattern.templatepattern.Chess;
+import com.example.designpattern.behavioralpattern.templatepattern.Game;
+import com.example.designpattern.behavioralpattern.templatepattern.Soccer;
 import com.example.designpattern.creationalpattern.abstractfactorypattern.AbstractFactory;
 import com.example.designpattern.creationalpattern.abstractfactorypattern.Bank;
 import com.example.designpattern.creationalpattern.abstractfactorypattern.FactoryCreator;
@@ -167,7 +175,40 @@ public class MainActivity extends AppCompatActivity {
 
         // test observer pattern
 //        createObserver();
-        createObserver2();
+//        createObserver2();
+
+        // test state pattern
+//        changeStateOfObject();
+//        testStrategyOfObject();
+
+        // test template pattern
+        testTemplate();
+    }
+
+    private void testTemplate() {
+        Game game = (Game) new Chess();
+        game.play();
+
+        Game game2 = (Game) new Soccer();
+        game2.play();
+    }
+
+    private void testStrategyOfObject() {
+
+        Context context = new Context(new Addition());
+        float value1 = 55;
+        float value2 = 42;
+        Log.i("Strategy: ","Addition = " + context.executeStrategy(value1, value2));
+
+        context = new Context(new Subtraction());
+        Log.i("Strategy: ", "Subtraction = " + context.executeStrategy(value1, value2));
+
+        context = new Context(new Multiplication());
+        Log.i("Strategy: ","Multiplication = " + context.executeStrategy(value1, value2));
+    }
+
+    private void changeStateOfObject() {
+        new StatePatternDemo("Management"); // Sales, Accounting
     }
 
     private void createObserver2() {
