@@ -522,7 +522,7 @@ Client uses the component class interface to interact with objects in the compos
 
 We can easily understand the example of composite design pattern by the UML diagram given below:
 
-![](https://www.javatpoint.com/images/designpattern/compositeuml2.jpg)
+![](https://github.com/moktar/DesignPattern/blob/master/designpattern/src/main/res/drawable/compositeuml2.jpg)
 
 ## 4. Decorator Pattern
 
