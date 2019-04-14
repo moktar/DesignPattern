@@ -117,6 +117,7 @@ The Factory Method Pattern is also known as **Virtual Constructor**.
 
 ![](https://www.javatpoint.com/images/designpattern/factorymethod.jpg)
 
+
 ## 2. Abstract Factory Pattern
 
 Abstract Factory Pattern says that just **define an interface or abstract class for creating families of related (or dependent) objects but without specifying their concrete sub-classes**.That means Abstract Factory lets a class returns a factory of classes. So, this is the reason that Abstract Factory Pattern is one level higher than the Factory Pattern.
@@ -144,7 +145,7 @@ Then after we will create concrete classes, **BankFactory**, and **LoanFactory**
 After that, **AbstractFactoryPatternExample** class uses the **FactoryCreator** to get an object of **AbstractFactory** class.
 See the diagram carefully which is given below:
 
-![](https://www.javatpoint.com/images/designpattern/abstractfactory.jpg)
+![](https://github.com/moktar/DesignPattern/blob/master/designpattern/src/main/res/drawable/abstractfactory.jpg)
 
 ## 3. Singleton Pattern
 
