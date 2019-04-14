@@ -631,7 +631,7 @@ Let's understand the example of proxy design pattern by the above UML diagram.
 
 ### UML for Proxy Pattern:
 
-![](https://www.javatpoint.com/images/designpattern/proxyuml.jpg)
+![](https://github.com/moktar/DesignPattern/blob/master/designpattern/src/main/res/drawable/proxyuml.jpg)
 
 # 3. Behavioral Design Patterns
 
@@ -683,7 +683,7 @@ Let's understand the example of Chain of Responsibility Pattern by the above UML
 
 ### UML for Chain of Responsibility Pattern:
 
-![](https://www.javatpoint.com/images/designpattern/chainofresponsibilityuml.jpg)
+![](https://github.com/moktar/DesignPattern/blob/master/designpattern/src/main/res/drawable/chainofresponsibilityuml.jpg)
 
 ## 2. Command Pattern
 
@@ -718,7 +718,7 @@ Let's understand the example of adapter design pattern by the above UML diagram.
 * **Invoker** This class asks the command to carry out the request.
 * **Receiver** This class knows to perform the operation.
 
-![](https://www.javatpoint.com/images/designpattern/commanduml.jpg)
+![](https://github.com/moktar/DesignPattern/blob/master/designpattern/src/main/res/drawable/commanduml.jpg)
 
 ## 3. Interpreter Pattern
 
@@ -746,7 +746,7 @@ Let's understand the example of Interpreter Pattern by the above UML diagram.
 
 ### UML for Interpreter Pattern
 
-![](https://www.javatpoint.com/images/designpattern/interpreteruml.jpg)
+![](https://github.com/moktar/DesignPattern/blob/master/designpattern/src/main/res/drawable/interpreteruml.jpg)
 
 ## 4. Iterator Pattern
 
@@ -774,7 +774,7 @@ Let's understand the example of iterator pattern pattern by the above UML diagra
 
 ### UML for Iterator Pattern:
 
-![](https://www.javatpoint.com/images/designpattern/iteratoruml.jpg)
+![](https://github.com/moktar/DesignPattern/blob/master/designpattern/src/main/res/drawable/iteratoruml.jpg)
 
 ## 5. Mediator Pattern
 
@@ -797,7 +797,7 @@ Mediator pattern is used to reduce communication complexity between multiple obj
 * It is commonly used in message-based systems likewise chat applications.
 * When the set of objects communicate in complex but in well-defined ways.
 
-![](https://www.javatpoint.com/images/designpattern/mediator-pattern.png)
+![](https://github.com/moktar/DesignPattern/blob/master/designpattern/src/main/res/drawable/mediator-pattern.png)
 
 ### Participants:
 
@@ -826,7 +826,7 @@ Undo or backspace or ctrl+z is one of the most used operation in an editor. Meme
 
 ### UML for Memento Pattern:
 
-![](https://www.javatpoint.com/images/designpattern/memento-pattern.png)
+![](https://github.com/moktar/DesignPattern/blob/master/designpattern/src/main/res/drawable/memento-pattern.png)
 
 ## 7. Observer Pattern
 
@@ -845,7 +845,7 @@ The Memento pattern is also known as Dependents or Publish-Subscribe.
 
 ### UML for Observer Pattern:
 
-![](https://www.javatpoint.com/images/designpattern/observer-pattern.png)
+![](https://github.com/moktar/DesignPattern/blob/master/designpattern/src/main/res/drawable/observer-pattern.png)
 
 ## 8. State Pattern
 
@@ -865,7 +865,7 @@ The State Pattern is also known as Objects for States.
 
 ### UML for State Pattern:
 
-![](https://www.javatpoint.com/images/designpattern/state-pattern.png)
+![](https://github.com/moktar/DesignPattern/blob/master/designpattern/src/main/res/drawable/state-pattern.png)
 
 ## 9. Strategy Pattern
 
@@ -886,7 +886,7 @@ The Strategy Pattern is also known as Policy
 
 ### UML for Strategy Pattern:
 
-![](https://www.javatpoint.com/images/designpattern/strategy-pattern3.png)
+![](https://github.com/moktar/DesignPattern/blob/master/designpattern/src/main/res/drawable/strategy-pattern3.png)
 
 
 ## 10. Template Pattern
@@ -904,7 +904,7 @@ A Template Pattern says that "just define the skeleton of a function in an opera
 
 ### UML for Template Pattern:
 
-![](https://www.javatpoint.com/images/designpattern/template-pattern.png)
+![](https://github.com/moktar/DesignPattern/blob/master/designpattern/src/main/res/drawable/template-pattern.png)
 
 
 
